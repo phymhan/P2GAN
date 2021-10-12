@@ -113,7 +113,7 @@ CUDA_VISIBLE_DEVICES=0,1 python train.py \
 --save_test_iteration --no_intra_fid 
 ```
 
-Train a **$f$-cGAN**:
+Train a **f-cGAN**:
 ```
 CUDA_VISIBLE_DEVICES=0,1 python train.py \
 --dataset V200_hdf5 \
@@ -207,7 +207,7 @@ CUDA_VISIBLE_DEVICES=0,1 python train.py \
 --save_test_iteration --no_intra_fid 
 ```
 
-# ImageNet $64 \times 64$ Resolution Experiments (BigGAN Codebase)
+# ImageNet 64x64 Resolution Experiments (BigGAN Codebase)
 Train a **P2GAN**:
 ```
 CUDA_VISIBLE_DEVICES=0,1 python train.py \
@@ -268,7 +268,7 @@ CUDA_VISIBLE_DEVICES=0,1 python train.py \
 --which_best FID --save_test_iteration 
 ```
 
-# ImageNet $128 \times 128$ Resolution Experiments (StudioGAN Codebase)
+# ImageNet 128x128 Resolution Experiments (StudioGAN Codebase)
 Experiments for ImageNet at 128-by-128 resolution and CIFAR10 are based on the [StudioGAN](https://github.com/POSTECH-CVLab/PyTorch-StudioGAN) codebase. The code is tested on 4 A100 GPUs.
 
 To train a **P2GAN** model:
@@ -311,7 +311,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python src/main.py -t -e -sync_bn -c src/configs/P2
 | --- | :---: | :---: | :---: |
 | Proj-GAN | [gema](https://drive.google.com/file/d/1mg8RLMJUThJJMbfAdo2okR4S_w2PrwyQ/view?usp=sharing) | [log](https://drive.google.com/file/d/1nBv6azKs1_bELjpccDSfyI4K9WJi8UWD/view?usp=sharing) | 61.43 |
 | TAC-GAN  | [gema](https://drive.google.com/file/d/1sbZh-0vg3E0xB05ds234mJyxCzLnq0XG/view?usp=sharing) | [log](https://drive.google.com/file/d/1dh0VMCKLUb3PrIbwtv5s0VvGKOdhkhwj/view?usp=sharing) | 96.06 |
-| $f$-cGAN | [gema](https://drive.google.com/file/d/1F8wRrFWCLZjc3F7R3xglFLSjc3dLoCgf/view?usp=sharing) | [log](https://drive.google.com/file/d/1u4r-AiT6gDShElU4IxFCXHm0pxeQTYtD/view?usp=sharing) | 29.54 |
+| f-cGAN | [gema](https://drive.google.com/file/d/1F8wRrFWCLZjc3F7R3xglFLSjc3dLoCgf/view?usp=sharing) | [log](https://drive.google.com/file/d/1u4r-AiT6gDShElU4IxFCXHm0pxeQTYtD/view?usp=sharing) | 29.54 |
 | P2GAN    | [gema](https://drive.google.com/file/d/1nJg4Mxk0pArjrO7u-4fzbdmYJfM3thLw/view?usp=sharing) | [log](https://drive.google.com/file/d/1vhfWo2U7sCiQvWF3k7Kf6F62wRI1qhok/view?usp=sharing) | 20.70 |
 | P2GAN-w  | [gema](https://drive.google.com/file/d/1xdgh_GmjUxqpVxJFJKjTwwnmmkHTDz29/view?usp=sharing) | [log](https://drive.google.com/file/d/1RqLI382ZOQ487n5h4LWf40CarIBzRqU8/view?usp=sharing) | 15.70 |
 
@@ -321,7 +321,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python src/main.py -t -e -sync_bn -c src/configs/P2
 | --- | :---: | :---: | :---: |
 | Proj-GAN | [gema](https://drive.google.com/file/d/1ntqKMT_PxTIoPd9txKAxJG4q_R4WJ-NQ/view?usp=sharing) | [log](https://drive.google.com/file/d/1p_S6hXHBwhiIY99T1P114IlbHtasqlzc/view?usp=sharing) | 23.57 |
 | TAC-GAN  | [gema](https://drive.google.com/file/d/1xluFV2EdkQNrxxPwotfpyYCPtB9TMk3f/view?usp=sharing) | [log](https://drive.google.com/file/d/1Z14YmEfHz4-KczgDjfiOY5QxxD__I0bI/view?usp=sharing) | 19.30 |
-| $f$-cGAN | [gema](https://drive.google.com/file/d/14ZHqtdYknO2SoQqprZnvbBsLAjLTx9lS/view?usp=sharing) | [log](https://drive.google.com/file/d/1igaJRuVKJd0cfDykp_5nnU174cOgIq90/view?usp=sharing) | 16.74 |
+| f-cGAN | [gema](https://drive.google.com/file/d/14ZHqtdYknO2SoQqprZnvbBsLAjLTx9lS/view?usp=sharing) | [log](https://drive.google.com/file/d/1igaJRuVKJd0cfDykp_5nnU174cOgIq90/view?usp=sharing) | 16.74 |
 | P2GAN    | [gema](https://drive.google.com/file/d/1h1yqghj1VSA3pXG5c8PSoqZ1l4SexROT/view?usp=sharing) | [log](https://drive.google.com/file/d/1HRFVOkCIkW8XuLVS_F3reR1VaHBDKtAm/view?usp=sharing) | 12.09 |
 | P2GAN-w  | [gema](https://drive.google.com/file/d/1xm_HMDHCFjeBPfueL-8oYz5EjqW0p-Fc/view?usp=sharing) | [log](https://drive.google.com/file/d/1HSnf88xoLgTAKnRHEY-C4nSuDq0dJ_sJ/view?usp=sharing) | 12.73 |
 
