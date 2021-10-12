@@ -10,7 +10,19 @@ The code consists of the following forks of BigGAN-PyTorch and PyTorch-StudioGAN
 
 
 # 1-D Mixture-of-Gaussian Experiment (Based on TAC-GAN Code)
-Coming soon...
+Run 1-D MoG experiments with `--distance` 0, 2, 4, 6, and 8 respectively. Use `--num_runs` to specify the number of runs and `--gan_loss` to specify GAN loss type (`bce` or `hinge`).
+```
+python run_1D_MoG.py --distance 0 --num_runs 100 --gan_loss bce
+```
+Results will be saved under `MOG/1D` as `.txt` files:
+```
+method:
+mean_0, var_0
+mean_1, var_1
+mean_2, var_2
+mean_m, var_m
+```
+
 
 # VGGFace2 Experiments (BigGAN Codebase)
 Experiments for VGGFace2, CIFAR100, and ImageNet at 64-by-64 resolution are based on the [BigGAN-PyTorch](https://github.com/ajbrock/BigGAN-PyTorch) codebase.
@@ -24,14 +36,14 @@ python make_hdf5.py --dataset V2000 --dataset_hdf5 VGGFace2000_ --num_workers 8
 
 ## Finetune an Inception V3 model for evaluation on VGGFace2
 ```
-python train_inception.py \
+CUDA_VISIBLE_DEVICES=0,1 python train_inception.py \
 --dataset V2000_hdf5 \
---experiment_name finetune_v2000_adam \
+--experiment_name newinc_v2000 \
 --optimizer adam \
 --tensorboard \
 --shuffle --batch_size 256 --parallel \
---num_epochs 50 \
---seed 0
+--num_epochs 100 \
+--seed 0 --save_every 200
 ```
 To load the model used in our experiments, please download the checkpoint as provided [here](https://drive.google.com/file/d/1_vuJqkhRjIrgthyZCBxZiLJ5yuXlBpUB/view?usp=sharing), and save it as `weights/newinc_v2000/model_itr_20000.pth`.
 
