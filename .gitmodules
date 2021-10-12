@@ -1,0 +1,6 @@
+[submodule "BigGAN-PyTorch"]
+	path = BigGAN-PyTorch
+	url = https://github.com/phymhan/BigGAN-PyTorch
+[submodule "PyTorch-StudioGAN"]
+	path = PyTorch-StudioGAN
+	url = https://github.com/phymhan/PyTorch-StudioGAN
