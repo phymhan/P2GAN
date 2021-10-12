@@ -1,8 +1,16 @@
 # P2GAN: Dual Projection Generative Adversarial Networks for Conditional Image Generation
 
-[[pdf]](https://openaccess.thecvf.com/content/ICCV2021/papers/Han_Dual_Projection_Generative_Adversarial_Networks_for_Conditional_Image_Generation_ICCV_2021_paper.pdf) [[supp]](https://openaccess.thecvf.com/content/ICCV2021/supplemental/Han_Dual_Projection_Generative_ICCV_2021_supplemental.pdf) [[arxiv]](https://arxiv.org/abs/2108.09016)  [[slides]](https://www.dropbox.com/s/h4kl683snx5ptlq/P2GAN_slides.pdf?dl=0) [[poster]](https://www.dropbox.com/s/9xg8vgsz0jg1xke/P2GAN_poster.pdf?dl=0)
+[[pdf]](https://openaccess.thecvf.com/content/ICCV2021/papers/Han_Dual_Projection_Generative_Adversarial_Networks_for_Conditional_Image_Generation_ICCV_2021_paper.pdf) [[supp]](https://openaccess.thecvf.com/content/ICCV2021/supplemental/Han_Dual_Projection_Generative_ICCV_2021_supplemental.pdf) [[arXiv]](https://arxiv.org/abs/2108.09016)  [[slides]](https://www.dropbox.com/s/h4kl683snx5ptlq/P2GAN_slides.pdf?dl=0) [[poster]](https://www.dropbox.com/s/9xg8vgsz0jg1xke/P2GAN_poster.pdf?dl=0)
 
 ![Discriminator models for conditional GANs.](/assets/discriminator.png)
+
+The code consists of the following forks of BigGAN-PyTorch and PyTorch-StudioGAN:
+- [phymhan/BigGAN-PyTorch](https://github.com/phymhan/BigGAN-PyTorch)
+- [phymhan/PyTorch-StudioGAN](https://github.com/phymhan/PyTorch-StudioGAN)
+
+
+# 1-D Mixture-of-Gaussian Experiment (Based on TAC-GAN Code)
+Coming soon...
 
 # VGGFace2 Experiments (BigGAN Codebase)
 Experiments for VGGFace2, CIFAR100, and ImageNet at 64-by-64 resolution are based on the [BigGAN-PyTorch](https://github.com/ajbrock/BigGAN-PyTorch) codebase.
@@ -318,12 +326,8 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python src/main.py -t -e -sync_bn -c src/configs/P2
 | P2GAN-w  | [gema](https://drive.google.com/file/d/1xm_HMDHCFjeBPfueL-8oYz5EjqW0p-Fc/view?usp=sharing) | [log](https://drive.google.com/file/d/1HSnf88xoLgTAKnRHEY-C4nSuDq0dJ_sJ/view?usp=sharing) | 12.73 |
 
 
-# 1-D Mixture-of-Gaussian Experiment
-Coming soon...
-
-
 # Citation
-P2GAN implementation is heavily based on [BigGAN](https://github.com/ajbrock/BigGAN-PyTorch) and [StudioGAN](https://github.com/POSTECH-CVLab/PyTorch-StudioGAN). If you use this code, please cite
+P2GAN implementation is heavily based on [BigGAN](https://github.com/ajbrock/BigGAN-PyTorch), [StudioGAN](https://github.com/POSTECH-CVLab/PyTorch-StudioGAN), and [TAC-GAN](https://github.com/batmanlab/twin-auxiliary-classifiers-gan). If you use this code, please cite
 
 ```
 @InProceedings{Han_2021_ICCV,
